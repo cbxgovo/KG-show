@@ -1,0 +1,376 @@
+{
+    "nodes": [
+        {
+            "symbolSize": "93",
+            "name": "Ag",
+            "id": "13736",
+            "category": 9,
+            "value": "ELEM",
+            "rawSymbolSize": "93",
+            "fixed": true,
+            "x":600,
+            "y":600
+        },
+        {
+            "symbolSize": "120",
+            "name": "Galena",
+            "id": "3366",
+            "category": 6,
+            "value": "MINE",
+            "rawSymbolSize": "120",
+            "fixed": true,
+            "x":200,
+            "y":800
+        },
+        {
+            "symbolSize": "1031",
+            "name": "Pyrite",
+            "id": "2954",
+            "category": 6,
+            "value": "MINE",
+            "rawSymbolSize": "1031",
+            "fixed": true,
+            "x":400,
+            "y":400
+        },
+        {
+            "symbolSize": "5",
+            "name": "Hydrothermal event",
+            "id": "10422",
+            "category": 4,
+            "value": "CHEM",
+            "rawSymbolSize": "5",
+            "fixed": true,
+            "x":400,
+            "y":500
+        },
+        {
+            "symbolSize": "145",
+            "name": "Host rock",
+            "id": "6955",
+            "category": 0,
+            "value": "ROCK",
+            "rawSymbolSize": "145",
+            "fixed": true,
+            "x":800,
+            "y":600
+        },
+        {
+            "symbolSize": "29",
+            "name": "Sulfur isotope",
+            "id": "11837",
+            "category": 4,
+            "value": "CHEM",
+            "rawSymbolSize": "29",
+            "fixed": true,
+            "x":1000,
+            "y":600
+        },
+        {
+            "symbolSize": "732",
+            "name": "Au",
+            "id": "5429",
+            "category": 9,
+            "value": "ELEM",
+            "rawSymbolSize": "732",
+            "fixed": true,
+            "x":1400,
+            "y":600
+        },
+        {
+            "symbolSize": "69",
+            "name": "Epithermal deposit",
+            "id": "5172",
+            "category": 7,
+            "value": "DEPO",
+            "rawSymbolSize": "69",
+            "fixed": true,
+            "x":1200,
+            "y":600
+        },
+        {
+            "symbolSize": "608",
+            "name": "Mineralization",
+            "id": "2254",
+            "category": 7,
+            "value": "DEPO",
+            "rawSymbolSize": "608",
+            "fixed": true,
+            "x":1200,
+            "y":600
+        }
+    ],
+    "links": [
+        {
+            "color": "#004d61",
+            "value2": "MINE",
+            "value1": "ELEM",
+            "width": "2",
+            "source": "13736",
+            "name2": "Galena",
+            "name1": "Ag",
+            "relation": "Message-Topic",
+            "target": "3366",
+            "value": "Message-Topic",
+            "lineStyle": {
+                "color": "#004d61",
+                "width": 2
+            },
+            "label": {
+                "formatter": "{c}"
+            }
+        },
+        {
+            "color": "#004d61",
+            "value2": "MINE",
+            "value1": "MINE",
+            "width": "1",
+            "source": "3366",
+            "name2": "Pyrite",
+            "name1": "Galena",
+            "target": "2954",
+            "relation": "Message-Topic",
+            "value": "Message-Topic",
+            "lineStyle": {
+                "color": "#004d61",
+                "width": 1
+            },
+            "label": {
+                "formatter": "{c}"
+            }
+        },
+        {
+            "color": "#004d61",
+            "value2": "CHEM",
+            "value1": "MINE",
+            "width": "1",
+            "source": "2954",
+            "name2": "Hydrothermal event",
+            "name1": "Pyrite",
+            "relation": "Message-Topic",
+            "target": "10422",
+            "value": "Message-Topic",
+            "lineStyle": {
+                "color": "#004d61",
+                "width": 1
+            },
+            "label": {
+                "formatter": "{c}"
+            }
+        },
+        {
+            "color": "#2694ab",
+            "value2": "ROCK",
+            "value1": "CHEM",
+            "width": "1",
+            "source": "10422",
+            "name2": "Host rock",
+            "name1": "Hydrothermal event",
+            "relation": "Content-Container",
+            "target": "6955",
+            "value": "Content-Container",
+            "lineStyle": {
+                "color": "#2694ab",
+                "width": 1
+            },
+            "label": {
+                "formatter": "{c}"
+            }
+        },
+        {
+            "color": "#004d61",
+            "value2": "CHEM",
+            "value1": "ROCK",
+            "width": "1",
+            "source": "6955",
+            "name2": "Sulfur isotope",
+            "name1": "Host rock",
+            "target": "11837",
+            "relation": "Message-Topic",
+            "value": "Message-Topic",
+            "lineStyle": {
+                "color": "#004d61",
+                "width": 1
+            },
+            "label": {
+                "formatter": "{c}"
+            }
+        },
+        {
+            "color": "#a8dba8",
+            "value2": "MINE",
+            "value1": "CHEM",
+            "width": "6",
+            "source": "11837",
+            "name2": "Pyrite",
+            "name1": "Sulfur isotope",
+            "target": "2954",
+            "relation": "Entity-Origin",
+            "value": "Entity-Origin",
+            "lineStyle": {
+                "color": "#a8dba8",
+                "width": 6
+            },
+            "label": {
+                "formatter": "{c}"
+            }
+        },
+        {
+            "color": "#a8dba8",
+            "value2": "ELEM",
+            "value1": "MINE",
+            "width": "1",
+            "source": "2954",
+            "name2": "Au",
+            "name1": "Pyrite",
+            "relation": "Entity-Origin",
+            "target": "5429",
+            "value": "Entity-Origin",
+            "lineStyle": {
+                "color": "#a8dba8",
+                "width": 1
+            },
+            "label": {
+                "formatter": "{c}"
+            }
+        },
+        {
+            "color": "#66cdaa",
+            "value2": "MINE",
+            "value1": "CHEM",
+            "width": "1",
+            "source": "11837",
+            "name2": "Pyrite",
+            "name1": "Sulfur isotope",
+            "relation": "Component-Whole",
+            "target": "2954",
+            "value": "Component-Whole",
+            "lineStyle": {
+                "color": "#66cdaa",
+                "width": 1
+            },
+            "label": {
+                "formatter": "{c}"
+            }
+        },
+        {
+            "color": "#004d61",
+            "value2": "MINE",
+            "value1": "CHEM",
+            "width": "1",
+            "source": "11837",
+            "name2": "Pyrite",
+            "name1": "Sulfur isotope",
+            "target": "2954",
+            "relation": "Message-Topic",
+            "value": "Message-Topic",
+            "lineStyle": {
+                "color": "#004d61",
+                "width": 1
+            },
+            "label": {
+                "formatter": "{c}"
+            }
+        },
+        {
+            "color": "#66cdaa",
+            "value2": "DEPO",
+            "value1": "ROCK",
+            "width": "1",
+            "source": "6955",
+            "name2": "Epithermal deposit",
+            "name1": "Host rock",
+            "relation": "Component-Whole",
+            "target": "5172",
+            "value": "Component-Whole",
+            "lineStyle": {
+                "color": "#66cdaa",
+                "width": 1
+            },
+            "label": {
+                "formatter": "{c}"
+            }
+        },
+        {
+            "color": "#004d61",
+            "value2": "DEPO",
+            "value1": "DEPO",
+            "width": "1",
+            "source": "5172",
+            "name2": "Mineralization",
+            "name1": "Epithermal deposit",
+            "relation": "Message-Topic",
+            "target": "2254",
+            "value": "Message-Topic",
+            "lineStyle": {
+                "color": "#004d61",
+                "width": 1
+            },
+            "label": {
+                "formatter": "{c}"
+            }
+        },
+        {
+            "color": "#a8dba8",
+            "value2": "ELEM",
+            "value1": "DEPO",
+            "width": "1",
+            "source": "2254",
+            "name2": "Au",
+            "name1": "Mineralization",
+            "relation": "Entity-Origin",
+            "target": "5429",
+            "value": "Entity-Origin",
+            "lineStyle": {
+                "color": "#a8dba8",
+                "width": 1
+            },
+            "label": {
+                "formatter": "{c}"
+            }
+        }
+    ],
+    "categories": [
+        {
+            "name": "ROCK",
+            "symbol": "circle"
+        },
+        {
+            "name": "TECT",
+            "symbol": "rect"
+        },
+        {
+            "name": "ALTE",
+            "symbol": "roundRect"
+        },
+        {
+            "name": "PHYS",
+            "symbol": "triangle"
+        },
+        {
+            "name": "CHEM",
+            "symbol": "diamond"
+        },
+        {
+            "name": "CHRO",
+            "symbol": "pin"
+        },
+        {
+            "name": "MINE",
+            "symbol": "circle"
+        },
+        {
+            "name": "DEPO",
+            "symbol": "rect"
+        },
+        {
+            "name": "DEEP",
+            "symbol": "roundRect"
+        },
+        {
+            "name": "ELEM",
+            "symbol": "triangle"
+        }
+    ],
+    "history": []
+}
